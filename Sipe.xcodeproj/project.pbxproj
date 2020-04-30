@@ -3,23 +3,217 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		0E1F6F7BC9F275481A22CFAA /* Pods_Sipe_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E884DDACDD3CCE77F4553CC /* Pods_Sipe_iOS.framework */; };
+		1C822A4E245A325B00CC1C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A4D245A325B00CC1C09 /* AppDelegate.swift */; };
+		1C822A50245A325B00CC1C09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A4F245A325B00CC1C09 /* SceneDelegate.swift */; };
+		1C822A52245A325B00CC1C09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A51245A325B00CC1C09 /* ContentView.swift */; };
+		1C822A54245A325C00CC1C09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A53245A325C00CC1C09 /* Assets.xcassets */; };
+		1C822A57245A325C00CC1C09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A56245A325C00CC1C09 /* Preview Assets.xcassets */; };
+		1C822A5A245A325C00CC1C09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A58245A325C00CC1C09 /* LaunchScreen.storyboard */; };
+		1C822A66245A328D00CC1C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A65245A328D00CC1C09 /* AppDelegate.swift */; };
+		1C822A68245A328D00CC1C09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A67245A328D00CC1C09 /* ContentView.swift */; };
+		1C822A6A245A328E00CC1C09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A69245A328E00CC1C09 /* Assets.xcassets */; };
+		1C822A6D245A328E00CC1C09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A6C245A328E00CC1C09 /* Preview Assets.xcassets */; };
+		1C822A70245A328E00CC1C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A6E245A328E00CC1C09 /* Main.storyboard */; };
+		1C822A77245A3CD500CC1C09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A76245A3CD500CC1C09 /* GoogleService-Info.plist */; };
+		1C822A79245A406600CC1C09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A78245A406600CC1C09 /* GoogleService-Info.plist */; };
+		62FE8ECC3C91B05194D55ABD /* Pods_Sipe_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FCCFE49D12F9AC73797684 /* Pods_Sipe_macOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D679F0313B83B5A61584FEB /* Pods-Sipe macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sipe macOS.release.xcconfig"; path = "Target Support Files/Pods-Sipe macOS/Pods-Sipe macOS.release.xcconfig"; sourceTree = "<group>"; };
+		0D6C4435FFC6C99569FFFED3 /* Pods-Sipe iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sipe iOS.debug.xcconfig"; path = "Target Support Files/Pods-Sipe iOS/Pods-Sipe iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1C822A4A245A325B00CC1C09 /* Sipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C822A4D245A325B00CC1C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C822A4F245A325B00CC1C09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1C822A51245A325B00CC1C09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C822A53245A325C00CC1C09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C822A56245A325C00CC1C09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1C822A59245A325C00CC1C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1C822A5B245A325C00CC1C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C822A63245A328D00CC1C09 /* Sipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C822A65245A328D00CC1C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C822A67245A328D00CC1C09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C822A69245A328E00CC1C09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C822A6C245A328E00CC1C09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1C822A6F245A328E00CC1C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C822A71245A328E00CC1C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C822A72245A328E00CC1C09 /* Sipe_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sipe_macOS.entitlements; sourceTree = "<group>"; };
+		1C822A76245A3CD500CC1C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1C822A78245A406600CC1C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32FAEC880C26F4777113C926 /* Pods-Sipe macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sipe macOS.debug.xcconfig"; path = "Target Support Files/Pods-Sipe macOS/Pods-Sipe macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5C7C6738991A10EBD8FAA9BE /* Pods-Sipe iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sipe iOS.release.xcconfig"; path = "Target Support Files/Pods-Sipe iOS/Pods-Sipe iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8E884DDACDD3CCE77F4553CC /* Pods_Sipe_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sipe_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5FCCFE49D12F9AC73797684 /* Pods_Sipe_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sipe_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C822A47245A325B00CC1C09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E1F6F7BC9F275481A22CFAA /* Pods_Sipe_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C822A60245A328D00CC1C09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62FE8ECC3C91B05194D55ABD /* Pods_Sipe_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1C822A3F245A321600CC1C09 = {
 			isa = PBXGroup;
 			children = (
+				1C822A4C245A325B00CC1C09 /* Sipe iOS */,
+				1C822A64245A328D00CC1C09 /* Sipe macOS */,
+				1C822A4B245A325B00CC1C09 /* Products */,
+				DE4F9C4739FFBBBEEA00DBCE /* Pods */,
+				7C01CD4426961DA9D32A8519 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
+		1C822A4B245A325B00CC1C09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C822A4A245A325B00CC1C09 /* Sipe.app */,
+				1C822A63245A328D00CC1C09 /* Sipe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C822A4C245A325B00CC1C09 /* Sipe iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1C822A4D245A325B00CC1C09 /* AppDelegate.swift */,
+				1C822A4F245A325B00CC1C09 /* SceneDelegate.swift */,
+				1C822A51245A325B00CC1C09 /* ContentView.swift */,
+				1C822A53245A325C00CC1C09 /* Assets.xcassets */,
+				1C822A58245A325C00CC1C09 /* LaunchScreen.storyboard */,
+				1C822A5B245A325C00CC1C09 /* Info.plist */,
+				1C822A76245A3CD500CC1C09 /* GoogleService-Info.plist */,
+				1C822A55245A325C00CC1C09 /* Preview Content */,
+			);
+			path = "Sipe iOS";
+			sourceTree = "<group>";
+		};
+		1C822A55245A325C00CC1C09 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1C822A56245A325C00CC1C09 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1C822A64245A328D00CC1C09 /* Sipe macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1C822A65245A328D00CC1C09 /* AppDelegate.swift */,
+				1C822A67245A328D00CC1C09 /* ContentView.swift */,
+				1C822A69245A328E00CC1C09 /* Assets.xcassets */,
+				1C822A6E245A328E00CC1C09 /* Main.storyboard */,
+				1C822A71245A328E00CC1C09 /* Info.plist */,
+				1C822A78245A406600CC1C09 /* GoogleService-Info.plist */,
+				1C822A72245A328E00CC1C09 /* Sipe_macOS.entitlements */,
+				1C822A6B245A328E00CC1C09 /* Preview Content */,
+			);
+			path = "Sipe macOS";
+			sourceTree = "<group>";
+		};
+		1C822A6B245A328E00CC1C09 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1C822A6C245A328E00CC1C09 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7C01CD4426961DA9D32A8519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E884DDACDD3CCE77F4553CC /* Pods_Sipe_iOS.framework */,
+				E5FCCFE49D12F9AC73797684 /* Pods_Sipe_macOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE4F9C4739FFBBBEEA00DBCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D6C4435FFC6C99569FFFED3 /* Pods-Sipe iOS.debug.xcconfig */,
+				5C7C6738991A10EBD8FAA9BE /* Pods-Sipe iOS.release.xcconfig */,
+				32FAEC880C26F4777113C926 /* Pods-Sipe macOS.debug.xcconfig */,
+				0D679F0313B83B5A61584FEB /* Pods-Sipe macOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C822A49245A325B00CC1C09 /* Sipe iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C822A5C245A325C00CC1C09 /* Build configuration list for PBXNativeTarget "Sipe iOS" */;
+			buildPhases = (
+				C2179A3A50ABEB8E1C038755 /* [CP] Check Pods Manifest.lock */,
+				1C822A46245A325B00CC1C09 /* Sources */,
+				1C822A47245A325B00CC1C09 /* Frameworks */,
+				1C822A48245A325B00CC1C09 /* Resources */,
+				8E67E284F13DB2736E156928 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sipe iOS";
+			productName = "Sipe iOS";
+			productReference = 1C822A4A245A325B00CC1C09 /* Sipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C822A62245A328D00CC1C09 /* Sipe macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C822A73245A328E00CC1C09 /* Build configuration list for PBXNativeTarget "Sipe macOS" */;
+			buildPhases = (
+				6B53B7A6F767637FAC1C7330 /* [CP] Check Pods Manifest.lock */,
+				1C822A5F245A328D00CC1C09 /* Sources */,
+				1C822A60245A328D00CC1C09 /* Frameworks */,
+				1C822A61245A328D00CC1C09 /* Resources */,
+				9759BC011495538FB0EB07E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sipe macOS";
+			productName = "Sipe macOS";
+			productReference = 1C822A63245A328D00CC1C09 /* Sipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1C822A40245A321600CC1C09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
+				TargetAttributes = {
+					1C822A49245A325B00CC1C09 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					1C822A62245A328D00CC1C09 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
 			};
 			buildConfigurationList = 1C822A43245A321600CC1C09 /* Build configuration list for PBXProject "Sipe" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -30,12 +224,162 @@
 				Base,
 			);
 			mainGroup = 1C822A3F245A321600CC1C09;
+			productRefGroup = 1C822A4B245A325B00CC1C09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1C822A49245A325B00CC1C09 /* Sipe iOS */,
+				1C822A62245A328D00CC1C09 /* Sipe macOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C822A48245A325B00CC1C09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C822A5A245A325C00CC1C09 /* LaunchScreen.storyboard in Resources */,
+				1C822A77245A3CD500CC1C09 /* GoogleService-Info.plist in Resources */,
+				1C822A57245A325C00CC1C09 /* Preview Assets.xcassets in Resources */,
+				1C822A54245A325C00CC1C09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C822A61245A328D00CC1C09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C822A70245A328E00CC1C09 /* Main.storyboard in Resources */,
+				1C822A79245A406600CC1C09 /* GoogleService-Info.plist in Resources */,
+				1C822A6D245A328E00CC1C09 /* Preview Assets.xcassets in Resources */,
+				1C822A6A245A328E00CC1C09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B53B7A6F767637FAC1C7330 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sipe macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E67E284F13DB2736E156928 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sipe iOS/Pods-Sipe iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sipe iOS/Pods-Sipe iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sipe iOS/Pods-Sipe iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9759BC011495538FB0EB07E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sipe macOS/Pods-Sipe macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sipe macOS/Pods-Sipe macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sipe macOS/Pods-Sipe macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2179A3A50ABEB8E1C038755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sipe iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C822A46245A325B00CC1C09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C822A4E245A325B00CC1C09 /* AppDelegate.swift in Sources */,
+				1C822A50245A325B00CC1C09 /* SceneDelegate.swift in Sources */,
+				1C822A52245A325B00CC1C09 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C822A5F245A328D00CC1C09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C822A68245A328D00CC1C09 /* ContentView.swift in Sources */,
+				1C822A66245A328D00CC1C09 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1C822A58245A325C00CC1C09 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C822A59245A325C00CC1C09 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1C822A6E245A328E00CC1C09 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C822A6F245A328E00CC1C09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1C822A44245A321600CC1C09 /* Debug */ = {
@@ -50,6 +394,297 @@
 			};
 			name = Release;
 		};
+		1C822A5D245A325C00CC1C09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6C4435FFC6C99569FFFED3 /* Pods-Sipe iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"Sipe iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sipe iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-iOS";
+				PRODUCT_NAME = Sipe;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C822A5E245A325C00CC1C09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7C6738991A10EBD8FAA9BE /* Pods-Sipe iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Sipe iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sipe iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-iOS";
+				PRODUCT_NAME = Sipe;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C822A74245A328E00CC1C09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32FAEC880C26F4777113C926 /* Pods-Sipe macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Sipe macOS/Sipe_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"Sipe macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sipe macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-macOS";
+				PRODUCT_NAME = Sipe;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1C822A75245A328E00CC1C09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D679F0313B83B5A61584FEB /* Pods-Sipe macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Sipe macOS/Sipe_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Sipe macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = N2V9KYH4KN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sipe macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-macOS";
+				PRODUCT_NAME = Sipe;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -58,6 +693,24 @@
 			buildConfigurations = (
 				1C822A44245A321600CC1C09 /* Debug */,
 				1C822A45245A321600CC1C09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C822A5C245A325C00CC1C09 /* Build configuration list for PBXNativeTarget "Sipe iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C822A5D245A325C00CC1C09 /* Debug */,
+				1C822A5E245A325C00CC1C09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C822A73245A328E00CC1C09 /* Build configuration list for PBXNativeTarget "Sipe macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C822A74245A328E00CC1C09 /* Debug */,
+				1C822A75245A328E00CC1C09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
