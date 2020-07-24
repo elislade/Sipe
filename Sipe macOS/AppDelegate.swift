@@ -10,21 +10,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         FirebaseApp.configure()
-        
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
 
-        // Create the window and set the content view. 
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: contentView)
-        window.makeKeyAndOrderFront(nil)
+        newWindow(from: ContentView())
+        newWindow(from: ComposeView(presented: .constant(true)))
     }
 
+    func newWindow<T:View>(from view:T){
+
+        // let mask:NSWindow.StyleMask = [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView]
+        let mask:NSWindow.StyleMask = [.closable, .resizable, .borderless, .miniaturizable]
+        
+        
+        // Create the window and set the content view.
+        window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+            styleMask: mask,
+            backing: .buffered, defer: false)
+        
+        let contentView = view
+            .environmentObject(FIRData())
+            .environmentObject(WindowRef(window))
+        
+        window.center()
+        window.collectionBehavior = [.fullScreenPrimary]
+        //window.setFrameAutosaveName("Main Window")
+        window.setContentBorderThickness(0, for: .maxX)
+        window.contentView = NSHostingView(rootView: contentView)
+        window.contentView?.layer?.borderWidth = 0.2
+        window.contentView?.layer?.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        window.contentView?.layer?.cornerRadius = 6
+        window.backgroundColor = .clear
+        window.makeKeyAndOrderFront(nil)
+    }
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
