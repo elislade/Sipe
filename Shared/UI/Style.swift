@@ -16,7 +16,7 @@ typealias OSColor = UIColor
 #endif
 
 extension CGFloat {
-    static let MEDIUM_WIDTH:CGFloat = 500
+    static let MEDIUM_WIDTH: CGFloat = 500
 }
 
 extension Font {
@@ -73,7 +73,7 @@ extension LinearGradient {
         endPoint: .bottom
     )
     
-    static func fade(_ c:Color) -> LinearGradient {
+    static func fade(_ c: Color) -> LinearGradient {
         LinearGradient(
             gradient: .fade(c),
             startPoint: .top,

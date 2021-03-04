@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var data:FIRData
-    @Binding var write:Bool
+    @ObservedObject private var data = FIRData<Post>()
+    @Binding var write: Bool
     
     let trID = UUID()
     
@@ -14,9 +14,9 @@ struct HomeView: View {
                HStack {
                    Spacer()
                    VStack {
-                        ForEach(data.posts, id: \.id){ post in
+                        ForEach(data.collection, id: \.id){ post in
                             HStack(alignment:.top){
-                                PostCell(post: .constant(post))
+                                PostCell(post: post)
                                 Button("...", action:{})
                             }
                             .padding()

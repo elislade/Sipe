@@ -2,23 +2,25 @@ import SwiftUI
 
 struct PostCell: View {
     
-    @Binding var post:FIRData.Post
+    let post: Post
     @State var editable = false
     
-    var body: some View {
+    var dateString: String {
         var dt = "Date"
         if Calendar.current.isDateInToday(post.createdOn){
             dt = "Today " + DateFormatter.localizedString(from: post.createdOn, dateStyle: .none, timeStyle: .short)
         } else {
             dt = DateFormatter.localizedString(from: post.createdOn, dateStyle: .medium, timeStyle: .none)
         }
-        
-        return VStack(alignment: .leading, spacing: 8) {
-            
+        return dt
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .center, spacing: 8) {
                 VStack(alignment: .leading, spacing:1) {
                     HStack {
-                        Text(dt).fontWeight(.bold)
+                        Text(dateString).fontWeight(.bold)
                         Circle().frame(width: 4)
                         HStack(spacing: 1) {
                             // Image(systemName: "tag.fill").imageScale(.small)
@@ -41,7 +43,6 @@ struct PostCell: View {
             Text(post.content).font(.postBody)
                 .lineSpacing(3).lineLimit(4)
             
-            //Spacer()
         }
     }
 }

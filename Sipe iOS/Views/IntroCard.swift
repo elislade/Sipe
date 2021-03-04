@@ -7,15 +7,15 @@ struct IntroCard: View {
         VStack(spacing: 14){
             Image(systemName: "paragraph")
                 .resizable().scaledToFit().frame(width: 36)
-                .foregroundColor(.orange).opacity(0.5)
+                .foregroundColor(.orange)
             Text("Introduction").font(.postTitle)
-            Text(copy).font(.postBody).lineLimit(5).lineSpacing(4).opacity(0.5)
+            Text(copy).font(.postBody).lineSpacing(4).opacity(0.5)
         }
         .padding(20)
         .background(
             ZStack {
-                RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.5))
-                RoundedRectangle(cornerRadius: 10).stroke(Color.black.opacity(0.2))
+                RoundedRectangle(cornerRadius: 15).fill(Color.primary.opacity(0.1))
+                RoundedRectangle(cornerRadius: 15).stroke(Color.primary.opacity(0.2))
             }
         )
     }

@@ -20,8 +20,8 @@
 		1C822A79245A406600CC1C09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C822A78245A406600CC1C09 /* GoogleService-Info.plist */; };
 		1C822A7B245A56A400CC1C09 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A7A245A56A400CC1C09 /* Style.swift */; };
 		1C822A7C245A56A400CC1C09 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A7A245A56A400CC1C09 /* Style.swift */; };
-		1C822A7E245A56E500CC1C09 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A7D245A56E500CC1C09 /* FirebaseData.swift */; };
-		1C822A7F245A56E500CC1C09 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A7D245A56E500CC1C09 /* FirebaseData.swift */; };
+		1C822A7E245A56E500CC1C09 /* FirebaseDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A7D245A56E500CC1C09 /* FirebaseDataModels.swift */; };
+		1C822A7F245A56E500CC1C09 /* FirebaseDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A7D245A56E500CC1C09 /* FirebaseDataModels.swift */; };
 		1C822A84245A572700CC1C09 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A81245A572700CC1C09 /* ComposeView.swift */; };
 		1C822A85245A572700CC1C09 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A82245A572700CC1C09 /* HomeView.swift */; };
 		1C822A86245A572700CC1C09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822A83245A572700CC1C09 /* ContentView.swift */; };
@@ -47,6 +47,10 @@
 		1CD1FB71245B7DBC0069BB8B /* TrafficLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1FB70245B7DBC0069BB8B /* TrafficLights.swift */; };
 		1CD1FB73245BA6850069BB8B /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1FB72245BA6850069BB8B /* TitleBar.swift */; };
 		1CD1FB75245C6D970069BB8B /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1FB74245C6D970069BB8B /* Window.swift */; };
+		1CE26A5E25F0C8EB00FE327B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE26A5D25F0C8EB00FE327B /* Firebase.swift */; };
+		1CE26A5F25F0C8EB00FE327B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE26A5D25F0C8EB00FE327B /* Firebase.swift */; };
+		1CE26A6525F0C92500FE327B /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE26A6425F0C92500FE327B /* FirebaseData.swift */; };
+		1CE26A6625F0C92500FE327B /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE26A6425F0C92500FE327B /* FirebaseData.swift */; };
 		62FE8ECC3C91B05194D55ABD /* Pods_Sipe_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FCCFE49D12F9AC73797684 /* Pods_Sipe_macOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +73,7 @@
 		1C822A76245A3CD500CC1C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C822A78245A406600CC1C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C822A7A245A56A400CC1C09 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		1C822A7D245A56E500CC1C09 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
+		1C822A7D245A56E500CC1C09 /* FirebaseDataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataModels.swift; sourceTree = "<group>"; };
 		1C822A81245A572700CC1C09 /* ComposeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		1C822A82245A572700CC1C09 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C822A83245A572700CC1C09 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		1CD1FB70245B7DBC0069BB8B /* TrafficLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLights.swift; sourceTree = "<group>"; };
 		1CD1FB72245BA6850069BB8B /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		1CD1FB74245C6D970069BB8B /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		1CE26A5D25F0C8EB00FE327B /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		1CE26A6425F0C92500FE327B /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		32FAEC880C26F4777113C926 /* Pods-Sipe macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sipe macOS.debug.xcconfig"; path = "Target Support Files/Pods-Sipe macOS/Pods-Sipe macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7C6738991A10EBD8FAA9BE /* Pods-Sipe iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sipe iOS.release.xcconfig"; path = "Target Support Files/Pods-Sipe iOS/Pods-Sipe iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8E884DDACDD3CCE77F4553CC /* Pods_Sipe_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sipe_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +125,7 @@
 		1C822A3F245A321600CC1C09 = {
 			isa = PBXGroup;
 			children = (
+				1CE26A4E25F0C77800FE327B /* Shared */,
 				1C822A4C245A325B00CC1C09 /* Sipe iOS */,
 				1C822A64245A328D00CC1C09 /* Sipe macOS */,
 				1C822A4B245A325B00CC1C09 /* Products */,
@@ -141,8 +148,6 @@
 			children = (
 				1C822A4D245A325B00CC1C09 /* AppDelegate.swift */,
 				1C822A4F245A325B00CC1C09 /* SceneDelegate.swift */,
-				1C822A7D245A56E500CC1C09 /* FirebaseData.swift */,
-				1C822AA2245A6C8000CC1C09 /* SharedUI */,
 				1C822A89245A57E900CC1C09 /* Views */,
 				1C822A9E245A5CCA00CC1C09 /* Assets.xcassets */,
 				1C822A58245A325C00CC1C09 /* LaunchScreen.storyboard */,
@@ -209,12 +214,11 @@
 				1C822A8D245A57E900CC1C09 /* NewPostView.swift */,
 				1C822A8E245A57E900CC1C09 /* PostView.swift */,
 				1C822A90245A57E900CC1C09 /* ContentView.swift */,
-				1C822A91245A57E900CC1C09 /* TagsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1C822AA2245A6C8000CC1C09 /* SharedUI */ = {
+		1C822AA2245A6C8000CC1C09 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				1C822A87245A57CA00CC1C09 /* MacButtonStyle.swift */,
@@ -222,7 +226,19 @@
 				1C822A8F245A57E900CC1C09 /* PostCell.swift */,
 				1C822A9B245A581100CC1C09 /* TextView.swift */,
 			);
-			path = SharedUI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1CE26A4E25F0C77800FE327B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1C822AA2245A6C8000CC1C09 /* UI */,
+				1C822A7D245A56E500CC1C09 /* FirebaseDataModels.swift */,
+				1CE26A6425F0C92500FE327B /* FirebaseData.swift */,
+				1CE26A5D25F0C8EB00FE327B /* Firebase.swift */,
+				1C822A91245A57E900CC1C09 /* TagsView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		7C01CD4426961DA9D32A8519 /* Frameworks */ = {
@@ -434,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE26A5E25F0C8EB00FE327B /* Firebase.swift in Sources */,
 				1C822A9C245A581100CC1C09 /* TextView.swift in Sources */,
 				1C822A95245A57E900CC1C09 /* NewPostView.swift in Sources */,
 				1C822A94245A57E900CC1C09 /* IntroCard.swift in Sources */,
@@ -441,9 +458,10 @@
 				1C822A4E245A325B00CC1C09 /* AppDelegate.swift in Sources */,
 				1C822A92245A57E900CC1C09 /* SipeHeader.swift in Sources */,
 				1C822A99245A57E900CC1C09 /* TagsView.swift in Sources */,
+				1CE26A6525F0C92500FE327B /* FirebaseData.swift in Sources */,
 				1C822A50245A325B00CC1C09 /* SceneDelegate.swift in Sources */,
 				1C822A93245A57E900CC1C09 /* TagPicker.swift in Sources */,
-				1C822A7E245A56E500CC1C09 /* FirebaseData.swift in Sources */,
+				1C822A7E245A56E500CC1C09 /* FirebaseDataModels.swift in Sources */,
 				1C822A97245A57E900CC1C09 /* PostCell.swift in Sources */,
 				1C822A96245A57E900CC1C09 /* PostView.swift in Sources */,
 				1C822A7B245A56A400CC1C09 /* Style.swift in Sources */,
@@ -455,10 +473,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE26A6625F0C92500FE327B /* FirebaseData.swift in Sources */,
 				1CD1FB73245BA6850069BB8B /* TitleBar.swift in Sources */,
-				1C822A7F245A56E500CC1C09 /* FirebaseData.swift in Sources */,
+				1C822A7F245A56E500CC1C09 /* FirebaseDataModels.swift in Sources */,
 				1C822A84245A572700CC1C09 /* ComposeView.swift in Sources */,
 				1C822A9D245A581100CC1C09 /* TextView.swift in Sources */,
+				1CE26A5F25F0C8EB00FE327B /* Firebase.swift in Sources */,
 				1CB15BC7245F97D900DA7E7D /* TagPicker.swift in Sources */,
 				1C822A86245A572700CC1C09 /* ContentView.swift in Sources */,
 				1C822A7C245A56A400CC1C09 /* Style.swift in Sources */,
@@ -625,7 +645,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elislade.sipe;
 				PRODUCT_NAME = Sipe;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -693,7 +713,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elislade.sipe;
 				PRODUCT_NAME = Sipe;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -769,11 +789,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elislade.sipe;
 				PRODUCT_NAME = Sipe;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -841,10 +861,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.elislade.Sipe-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elislade.sipe;
 				PRODUCT_NAME = Sipe;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;

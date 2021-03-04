@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WindowDraggable: ViewModifier {
-    @EnvironmentObject var window:WindowRef
+    @EnvironmentObject private var window: WindowRef
     
     func body(content: Content) -> some View {
         content.gesture(DragGesture(coordinateSpace: .local).onChanged({ g in

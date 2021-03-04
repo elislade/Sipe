@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct TagsView: View {
-    @Binding var tags:[FIRData.Tag]
-    @State var editable = true
     
-    var removedTag:(FIRData.Tag) -> Void = {_ in}
+    let tags: [Tag]
+    var editable = true
+    var removedTag: (Tag) -> Void = {_ in}
     
     var body: some View {
         return HStack {
@@ -12,17 +12,17 @@ struct TagsView: View {
                 HStack {
                     Text(tag.name).font(.footnote).fontWeight(.semibold)
                     
-//                    if self.editable {
-//                        Button(action:{ }){
-//                            Image(systemName: "xmark.circle.fill").opacity(0.7)
-//                        }
-//                    }
+                    if editable {
+                        Button(action: { }){
+                            Image(systemName: "xmark.circle.fill").opacity(0.7)
+                        }.buttonStyle(PlainButtonStyle())
+                    }
                 }
                 .frame(height: 28)
                 .padding(.leading, 14)
-                .padding(.trailing, self.editable ? 6 : 14)
+                .padding(.trailing, editable ? 6 : 14)
                 .foregroundColor(.white)
-                .background(Color(tag.color))
+                .background(Color(tag.cgColor))
                 .cornerRadius(14)
             }
         }

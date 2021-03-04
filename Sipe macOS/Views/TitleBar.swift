@@ -2,9 +2,9 @@ import SwiftUI
 
 struct TitleBar: View {
     @Environment(\.colorScheme) var cs
-    @Binding var write:Bool
+    @Binding var write: Bool
     
-    @State var trailingView:AnyView?
+    @State var trailingView: AnyView?
     
     var body: some View {
         HStack {
@@ -18,7 +18,7 @@ struct TitleBar: View {
             if !write {
                 Button("Write", action: {
                    withAnimation(.main) {
-                       self.write = true
+                       write = true
                    }
                 }).buttonStyle(Style.btnMac).padding(.vertical)
             }
@@ -30,7 +30,7 @@ struct TitleBar: View {
         .overlay(Divider(), alignment: .bottom)
         .onPreferenceChange(ViewKey.self, perform: {
             print($0)
-            self.trailingView = $0.first?.v
+            trailingView = $0.first?.v
         }).windowDraggable()
     }
 }

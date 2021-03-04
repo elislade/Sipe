@@ -2,21 +2,21 @@ import SwiftUI
 
 struct PostView: View {
     
-    @State var post:FIRData.Post
-    @State var title = ""
-    @State var content = ""
+    let post: Post
+    @State private var title = ""
+    @State private var content = ""
     
     func update(){
         
     }
     
+    var canUpdate: Bool {
+        post.content != content || post.title != title
+    }
+    
     var body: some View {
-        var canUpdate:Bool {
-            post.content != content || post.title != title
-        }
-        
-        return VStack(alignment: .leading) {
-            // TagsView(tags: .constant(post.tags ?? []), removedTag: post.removeFromTags)
+        VStack(alignment: .leading) {
+            TagsView(tags: post.tags, removedTag: { _ in })
             HStack {
                 TextField("Title", text: $title).lineLimit(0).font(.title)
                 Spacer()
@@ -31,6 +31,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(post: FIRData.Post(FIRData(), title: "Hello", content: "World"))
+        PostView(post: Post(title: "Hello", content: "World"))
     }
 }

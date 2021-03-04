@@ -4,24 +4,23 @@ import CoreLocation
 struct NewPostView: View {
     @Environment(\.colorScheme) var scheme
     
-    @EnvironmentObject var data:FIRData
+    //@EnvironmentObject var data: FIRData<>
     
-    @State var title = ""
-    @State var content = ""
-    @State var tags:[FIRData.Tag] = []
-    
-    @State var addTag = false
+    @State private var title = ""
+    @State private var content = ""
+    @State private var tags: [Tag] = []
+    @State private var addTag = false
     
     let locManager = CLLocationManager()
     
-    @State var location: CLLocation?
+    @State private var location: CLLocation?
     
-    var created:() -> Void = {}
+    var created: () -> Void = {}
     
     func create() {
-        let c:CLLocationCoordinate2D? = locManager.location?.coordinate
-        let l:FIRData.Location? = c != nil ? FIRData.Location(data, coord: c!) : nil
-        FIRData.Post(data, title: title, content: content, loc: l, tags: tags).create()
+        let c: CLLocationCoordinate2D? = locManager.location?.coordinate
+        let l: Location? = c != nil ? Location(coord: c!) : nil
+        Post(title: title, content: content, tags: tags, location: l).create()
         created()
     }
     
@@ -78,7 +77,7 @@ struct NewPostView: View {
                     
                     if tags.count > 0 {
                         ScrollView(.horizontal, showsIndicators: false){
-                            TagsView(tags: .constant(tags))
+                            TagsView(tags: tags)
                         }
                         .cornerRadius(14)
                         .overlay(TagButton, alignment: .trailing)
@@ -112,11 +111,9 @@ struct NewPostView: View {
                     }
                     self.addTag = false
                 })
-                .environmentObject(self.data)
                 .background(LinearGradient.main)
                 .background(self.scheme == .light ? Color.white : Color(red: 0.08, green: 0.08, blue: 0.1))
                 .edgesIgnoringSafeArea(.all)
-                
             }.onAppear(perform: listenToLocation)
         }
         

@@ -1,9 +1,14 @@
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
-    @EnvironmentObject var data:FIRData
+    @ObservedObject private var data = FIRData<Post>()
     
-    @State var error:String?
+    @State var error: String?
+    
+    func signIn(){
+        
+    }
     
     var body: some View {
         ZStack {
@@ -11,21 +16,21 @@ struct ContentView: View {
                 VStack(spacing: 10) {
                     SipeHeader()
                     
-                    if data.posts.count == 0 {
+                    if data.collection.count == 0 {
                         IntroCard().padding(.horizontal).padding(.bottom, 60).frame(minWidth: 200, maxWidth: 550)
                     }
                     
-                    if data.user == nil {
+                    if Auth.auth().currentUser == nil {
                         Text("Not Logged In").opacity(0.3)
-                        Button("Sign In", action: data.signIn)
+                        Button("Sign In", action: signIn)
                     } else {
-                        ForEach(data.posts, id:\.id){ post in
-                            PostCell(post: .constant(post))
+                        ForEach(data.collection, id:\.id){ post in
+                            PostCell(post: post)
                                 .frame(maxWidth: 500)
                                 .padding()
                                 .contextMenu {
                                     Button(action: post.delete){
-                                        Image("trash_ctx_menu")
+                                        Image(systemName: "trash")
                                         Text("Delete")
                                     }
                                     Button(action: { }){
@@ -33,7 +38,7 @@ struct ContentView: View {
                                         Text("Report")
                                     }
                                     Button(action: { }){
-                                        Image("share_ctx_menu")
+                                        Image(systemName: "share")
                                         Text("Share")
                                     }
                                 }.padding(.bottom, 60)
@@ -66,8 +71,7 @@ struct ContentView: View {
                 }.transition(.modalMove)
             }
         }
-        .onReceive(data.errors, perform: { self.error = $0 })
-        .animation(.main)
+        //.onReceive(data.errors, perform: { self.error = $0 })
         .background(LinearGradient.main.edgesIgnoringSafeArea(.all))
     }
 }

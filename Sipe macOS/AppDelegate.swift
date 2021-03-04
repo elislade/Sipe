@@ -12,24 +12,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         FirebaseApp.configure()
 
         newWindow(from: ContentView())
-        newWindow(from: ComposeView(presented: .constant(true)))
+        newWindow(from: ComposeView(presented: .constant(true)).cornerRadius(10))
     }
 
     func newWindow<T:View>(from view:T){
 
-        // let mask:NSWindow.StyleMask = [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView]
-        let mask:NSWindow.StyleMask = [.closable, .resizable, .borderless, .miniaturizable]
+        // let mask: NSWindow.StyleMask = [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView]
+        let mask: NSWindow.StyleMask = [.closable, .resizable, .borderless, .miniaturizable]
         
         
-        // Create the window and set the content view.
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
             styleMask: mask,
             backing: .buffered, defer: false)
         
-        let contentView = view
-            .environmentObject(FIRData())
-            .environmentObject(WindowRef(window))
+        let contentView = view.environmentObject(WindowRef(window))
         
         window.center()
         window.collectionBehavior = [.fullScreenPrimary]

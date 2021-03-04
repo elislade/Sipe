@@ -2,25 +2,27 @@ import SwiftUI
 
 struct TrafficLights: View {
     
-    @EnvironmentObject var w:WindowRef
-    @State var active = true
+    @EnvironmentObject private var w: WindowRef
+    @State private var active = true
     
-    var body: some View {
-        let c = ZStack{
+    var shape: some View {
+        ZStack{
             Circle()
             Circle().inset(by: 0.25).stroke(Color.black.opacity(0.25), lineWidth: 0.5)
         }
-        
-        return HStack(spacing: 8){
-            Button(action: w.close){ c }
+    }
+    
+    var body: some View {
+        HStack(spacing: 8){
+            Button(action: w.close){ shape }
                 .frame(width: 13, height: 13)
                 .buttonStyle(PlainButtonStyle()).foregroundColor(.red)
             
-            Button(action: w.minimize){ c }
+            Button(action: w.minimize){ shape }
                 .frame(width: 13, height: 13)
                 .buttonStyle(PlainButtonStyle()).foregroundColor(.orange)
             
-            Button(action: w.fullscreen){ c }
+            Button(action: w.fullscreen){ shape }
                 .frame(width: 13, height: 13)
                 .buttonStyle(PlainButtonStyle()).foregroundColor(.green)
                 //.disabled(true)

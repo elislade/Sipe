@@ -1,28 +1,25 @@
 import SwiftUI
-import Combine
 
 #if os(macOS)
-
-typealias ViewRepresentable = NSViewRepresentable
 typealias ViewType = NSTextView
 typealias ViewTypeDelegate = NSTextViewDelegate
+typealias ViewRepresentable = NSViewRepresentable
+#endif
 
-#else
-
-typealias ViewRepresentable = UIViewRepresentable
+#if os(iOS)
 typealias ViewType = UITextView
 typealias ViewTypeDelegate = UITextViewDelegate
-
+typealias ViewRepresentable = UIViewRepresentable
 #endif
 
 struct TextView {
     
-    @Binding var text:String
+    @Binding var text: String
     
-    @State var fontSize:CGFloat = 16
-    @State var fontWeight:OSFont.Weight = .medium
-    @State var fontDesign:OSFontDescriptor.SystemDesign = .serif
-    @State var lineSpacing:CGFloat = 2
+    var fontSize: CGFloat = 16
+    var fontWeight: OSFont.Weight = .medium
+    var fontDesign: OSFontDescriptor.SystemDesign = .serif
+    var lineSpacing: CGFloat = 2
     
     var didBeginEditing: (String) -> Void = { _ in }
     var didChange: (String) -> Void = { _ in }
@@ -35,7 +32,7 @@ struct TextView {
         view.delegate = context.coordinator
         view.backgroundColor = .clear
         if let d = OSFont.systemFont(ofSize: fontSize, weight: fontWeight).fontDescriptor.withDesign(fontDesign) {
-            view.font = OSFont(descriptor: d, size: $fontSize.wrappedValue)
+            view.font = OSFont(descriptor: d, size: fontSize)
         }
         return view
     }
@@ -46,7 +43,7 @@ struct TextView {
     
     let layout = LayoutCoordinator()
     
-    class LayoutCoordinator:NSObject, NSLayoutManagerDelegate {
+    class LayoutCoordinator: NSObject, NSLayoutManagerDelegate {
         func layoutManager(
             _ layoutManager: NSLayoutManager,
             lineSpacingAfterGlyphAt glyphIndex: Int,
@@ -57,19 +54,16 @@ struct TextView {
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(_text)
+        return Coordinator{ text = $0 }
     }
+}
 
+protocol TextCoordinator {
+    var textChanged: (String) -> Void {get set}
 }
 
 #if os(macOS)
-
 extension TextView: NSViewRepresentable {
-    
-    func updateNSView(_ nsView: ViewType, context: Context) {
-        print("update", text)
-        nsView.string = text
-    }
     
     func makeNSView(context: Context) -> ViewType {
         let v = makeView(context: context)
@@ -77,36 +71,39 @@ extension TextView: NSViewRepresentable {
         return v
     }
     
-    class Coordinator:NSObject, ViewTypeDelegate {
-        // let layout = LayoutCoordinator()
-        @Binding var text:String
+    func updateNSView(_ nsView: ViewType, context: Context) {
+        nsView.string = text
+    }
+    
+    class Coordinator: NSObject, ViewTypeDelegate {
+
+        var textChanged: (String) -> Void
         
-        init(_ text:Binding<String>) {
-            self._text = text
+        init(_ evt: @escaping (String) -> Void) {
+            self.textChanged = evt
         }
         
         private func textViewDidBeginEditing(_ textView: ViewType) {
-            //guard let text = textView.textStorage?.string else { return }
-            //host?.didBeginEditing(textView.string)
-            text = textView.string
+            textChanged(textView.text)
+            
         }
         
         func textViewDidChange(_ textView: ViewType) {
-            //guard let text = textView.textStorage?.string else { return }
-            //host?.didChange(textView.string)
-            text = textView.string
+            textChanged(textView.text)
         }
         
         private func textViewDidEndEditing(_ textView: ViewType) {
-            //guard let text = textView.textStorage?.string else { return }
-            //host?.didFinishEditing(textView.string)
-            text = textView.string
+            textChanged(textView.text)
         }
     }
 }
 
-#else
+extension ViewType{
+    var text: String { string }
+}
+#endif
 
+#if os(iOS)
 extension TextView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ViewType {
@@ -123,29 +120,26 @@ extension TextView: UIViewRepresentable {
         }
     }
     
-    class Coordinator:NSObject, ViewTypeDelegate {
-        //let host:EditTextLong
-        @Binding var text:String
+    class Coordinator: NSObject, ViewTypeDelegate {
         
-        init(_ text:Binding<String>) {
-            self._text = text
+        var textChanged: (String) -> Void
+        
+        init(_ evt: @escaping (String) -> Void) {
+            self.textChanged = evt
         }
         
         func textViewDidBeginEditing(_ textView: ViewType) {
-            // host.didBeginEditing(textView.text)
-            text = textView.text
+            textChanged(textView.text)
         }
         
         func textViewDidChange(_ textView: ViewType) {
-            // host.didChange(textView.text)
-            text = textView.text
+            textChanged(textView.text)
         }
         
         func textViewDidEndEditing(_ textView: ViewType) {
-            // host.didFinishEditing(textView.text)
-            text = textView.text
+            textChanged(textView.text)
         }
     }
+    
 }
-
 #endif

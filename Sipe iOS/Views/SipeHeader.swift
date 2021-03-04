@@ -1,8 +1,11 @@
 import SwiftUI
+import Firebase
 
 struct SipeHeader: View {
+    
     @Environment(\.colorScheme) var scheme
-    @EnvironmentObject var data:FIRData
+    
+    let auth = Auth.auth()
     
     @State var expanded = true
     @State var createPost = false
@@ -11,17 +14,15 @@ struct SipeHeader: View {
         HStack {
             Spacer()
             VStack(spacing: 10){
-                //Button(action:{  }){
-                    Text("Sipe").font(.system(size:52, weight: .light, design: .serif))
+                Text("Sipe").font(.system(size:52, weight: .light, design: .serif))
                      .scaleEffect(expanded ? 1 : 0.5)
-                //}
                 
-                 if expanded {
+                if expanded {
                     Text("Writing that takes you places.")
                         .font(.system(size: 20, weight: .regular, design: .serif)).opacity(0.5)
                 }
                 
-                if data.user != nil {
+                if auth.currentUser != nil {
                     Button(action: { self.createPost = true }){
                         HStack(spacing: 4) {
                             Image(systemName: "paperplane.fill").imageScale(.small)
@@ -34,7 +35,7 @@ struct SipeHeader: View {
                         .cornerRadius(14)
                     }.padding(.top)
                     
-                    Button("Log out", action: data.signOut)
+                    Button("Log out", action: { try? auth.signOut() })
                 }
             }
             Spacer()
@@ -42,10 +43,9 @@ struct SipeHeader: View {
         .padding(.top, 20)
         .frame(height: expanded ? 300 : 50)
         .sheet(isPresented: $createPost){
-            NewPostView(created:{ self.createPost = false })
-                .environmentObject(self.data)
+            NewPostView(created: { createPost = false })
                 .background(LinearGradient.main)
-                .background(self.scheme == .light ? Color.white : Color(red: 0.08, green: 0.08, blue: 0.1))
+                .background(scheme == .light ? Color.white : Color(red: 0.08, green: 0.08, blue: 0.1))
                 .edgesIgnoringSafeArea(.all)
         }
     }

@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct TagPicker: View {
-    @EnvironmentObject var data:FIRData
+    @ObservedObject private var data = FIRData<Tag>()
     @State private var newTag = ""
     
-    var picked: (FIRData.Tag?) -> Void = { _ in }
+    var picked: (Tag?) -> Void = { _ in }
     
     let randColor = OSColor(
         red: .random(in: 0.2...0.8),
@@ -14,25 +14,25 @@ struct TagPicker: View {
     )
     
     func create() {
-        let t = FIRData.Tag(data, name: newTag, color: randColor)
+        let t = Tag(name: newTag, color: randColor.cgColor)
         t.create()
         picked(t)
     }
     
-    func tagFilter(_ tag:FIRData.Tag) -> Bool {
+    func tagFilter(_ tag: Tag) -> Bool {
         if newTag.count == 0 {
             return true
         } else {
-            return tag.name.lowercased().contains(self.newTag.lowercased())
+            return tag.name.lowercased().contains(newTag.lowercased())
         }
     }
     
     var body: some View {
-        VStack(spacing:0) {
+        VStack(spacing: 0) {
             HStack {
                 Text("Pick a Tag").font(.system(size: 24, weight: .bold, design: .serif))
                 Spacer()
-                Button(action: { self.picked(nil) }){
+                Button(action: { picked(nil) }){
                     Image(systemName: "xmark.circle.fill")
                         .resizable()
                         .scaledToFit()
@@ -55,10 +55,10 @@ struct TagPicker: View {
                             }
                         }
                     }
-                    ForEach(self.data.tags.filter(tagFilter), id:\.id){ tag in
-                        Button(action: { self.picked(tag) }){
+                    ForEach(data.collection.filter(tagFilter), id:\.id){ tag in
+                        Button(action: { picked(tag) }){
                             HStack {
-                                Circle().frame(width: 20, height: 20).foregroundColor(Color(tag.color))
+                                Circle().frame(width: 20, height: 20)//.foregroundColor(Color(tag.color))
                                 Text(tag.name).font(.postSubtitle)
                                 Spacer()
                             }

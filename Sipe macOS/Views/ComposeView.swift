@@ -1,18 +1,18 @@
 import SwiftUI
 
 struct ComposeView: View {
-    @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var data:FIRData
-    @Binding var presented:Bool
     
-    @State var title = "T"
-    @State var content = ""
-    @State var tags:[FIRData.Tag] = []
+    @Environment(\.colorScheme) var colorScheme
+    @Binding var presented: Bool
+    
+    @State private var title = "Title"
+    @State private var content = ""
+    @State private var tags: [Tag] = []
     
     @State var picking = false
     
     func compose(){
-        FIRData.Post(data, title: title, content: content, tags: tags).create()
+        Post(title: title, content: content, tags: tags).create()
     }
     
     func discard(){
@@ -30,12 +30,12 @@ struct ComposeView: View {
                 Spacer()
                 Button(action: discard){
                     // Text("Trash")
-                    Image("trash_ctx_menu").renderingMode(.template)
+                    Image(systemName: "trash")
                 }.buttonStyle(Style.btnMac)
                 Button("Post", action: compose).buttonStyle(Style.btnMac)
             }
             .padding(.horizontal)
-            .padding(.vertical, 5)//.background(Color.white.opacity(0.5))
+            .padding(.vertical, 5)
             .background(LinearGradient.titleBar(colorScheme))
             .windowDraggable()
             
@@ -45,7 +45,7 @@ struct ComposeView: View {
                 HStack(spacing: 0) {
                     Spacer()
                     VStack(spacing: 10) {
-                        // TagsView(tags: $tags)
+                        TagsView(tags: tags)
                         
                         HStack {
                             TextField("Title", text: $title).font(.postTitle)
@@ -57,16 +57,14 @@ struct ComposeView: View {
                                        if let tag = $0 {
                                            self.tags.append(tag)
                                        }
-                                   })
-                                    .environmentObject(self.data)
-                                    .textFieldStyle(PlainTextFieldStyle())
+                                   }).frame(minWidth: 220)
                                }
                                            
                         }
                         
                         // TextField("Content", text: $content).font(.postBody)
-                        // EditTextLong(text: $title, fontSize: 36, fontWeight: .heavy).background(Color.red)
-                        // EditTextLong(text: $title, fontSize: 36, fontWeight: .heavy).background(Color.red)
+                        // EditTextLong(text: $title, fontSize: 36, fontWeight: .heavy)
+                        
                         TextView(text: $content)
                             .frame(minHeight: 300)
                             .overlay(Text("Start typing...").font(.postBody), alignment: .topLeading)
